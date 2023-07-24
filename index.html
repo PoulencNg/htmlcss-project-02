@@ -11,9 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,300;1,400&family=Sen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <header class="header fixed">
         <nav class="navbar">
-            <img src="./assets/img/logo.svg" alt="Lesson logo" class="">
+            <a href="/">
+                <img src="./assets/img/logo.svg" alt="Lesson logo" class="">
+            </a>
             <ul class="navbar-list">
                 <a href="#home" class="active">
                     <li class="navbar-item">Home</li>
@@ -28,8 +30,73 @@
                     <li class="navbar-item">Reviews</li>
                 </a>
             </ul>
-            <a href="#!" class="navbar-btn">Sign Up</a>
+            <a href="#!" class="btn-signup">Sign Up</a>
         </nav>
     </header>
+    <div class="hero">
+        <div class="hero-body">
+            <div class="hero-body-img">
+                <img src="./assets/img/meo-2.jpg" alt="" class="hero-img">
+                <div class="hero-desc">
+                    <div class="hero-desc-body">
+                        <div class="hero-desc-item">
+                            <div class="hero-desc-circle" style="background-color: #FFF9E8;">
+                                <img src="./assets/img/circle-1.svg" alt="">
+                            </div>
+                            <div class="hero-desc-infor">
+                                <div class="hero-desc-quantity">20 Courses</div>
+                                <div class="hero-desc-name">UI/UX Design</div>
+                            </div>
+                        </div>
+                        <div class="hero-desc-item">
+                            <div class="hero-desc-circle" style="background-color: #FCEFFF;">
+                                <img src="./assets/img/circle-2.svg" alt="">
+                            </div>
+                            <div class="hero-desc-infor">
+                                <div class="hero-desc-quantity">20 Courses</div>
+                                <div class="hero-desc-name">Development</div>
+                            </div>
+                        </div>
+                        <div class="hero-desc-item">
+                            <div class="hero-desc-circle" style="background-color: #EBEAFF;">
+                                <img src="./assets/img/circle-3.svg" alt="">
+                            </div>
+                            <div class="hero-desc-infor">
+                                <div class="hero-desc-quantity">30 Courses</div>
+                                <div class="hero-desc-name">Marketing</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h2>Learn without limits and spread knowledge.</h2>
+                <p>Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world-class universities and companies.</p>
+                <div class="courses">
+                    <a href="#!" class="btn-hero">See courses</a>
+                    <div class="hero-watch">
+                        <a href="">
+                            <img src="./assets/img/hero-watch-icon.svg" alt=""> 
+                        </a>
+                        <a href="">Watch Video</a>
+                    </div>
+                </div>
+                <span>Recent engagement</span>
+                <div class="hero-stats">
+                    <div class="hero-stats-item">
+                        <strong>50K</strong>
+                        <p>Students</p>
+                    </div>
+                    <div class="hero-stats-item">
+                        <strong>70+</strong>
+                        <p>Courses</p>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
+    <div class="test" style="height:2000px"></div>
 </body>
 </html>

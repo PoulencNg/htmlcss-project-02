@@ -1,5 +1,9 @@
+* {
+	box-sizing: border-box;
+}
 :root {
-	--primary-color:#FFB900;
+	--primary-color:#FFFCF4;
+	--primary-width:1170px;
 }
 html {
 	font-size:62.5%;
@@ -7,18 +11,40 @@ html {
 body {
 	font-size:1.6rem;
 	font-family: 'Poppins', sans-serif;
-	font-family: 'Sen', sans-serif;			
+	font-family: 'Sen', sans-serif;		
+}
+/* Common */
+.btn-signup {
+	display: inline-block;
+	padding:17px 45px;
+	border-radius: 900px;
+	background: #171100;
+	font-family: Poppins;
+	font-size: 1.6rem;
+	font-style: normal;
+	font-weight: 600;
+	color:#fff;
+	text-decoration: none;
 }
 .header {
 	background: #FFFCF4;
+}
+.fixed {
+	position: sticky;
+	top:-28px;
+	left:0;
+	right:0;
+	z-index: 1;
 }
 .navbar {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width:1170px;
+	width:var(--primary-width);
 	margin-left:auto;
 	margin-right:auto;
+	padding: 36px 0 8px;
+	
 }
 .navbar-list {
 	display: flex;
@@ -45,6 +71,10 @@ body {
 	color: #171100 !important;
 	font-weight: 600;
 }
+.navbar-list a:hover {
+	color: #171100 !important;
+	font-weight: 600;
+}
 .active::after {
 	content:"";
 	display: block;
@@ -53,14 +83,196 @@ body {
 	border-radius: 1px;
 	background: #171100;	
 }
-.navbar-btn {
-	padding: 17px 45px;
-	border-radius: 24.5px;
-	background: #171100;
+
+.navbar-btn:hover {
+	opacity: 0.6;
+}
+
+
+/* ====Hero==== */
+.hero {
+	padding-top: 72px;
+	background-color: var(--primary-color);
+}
+.hero-body {
+	display: flex;
+	justify-content: space-between;
+	width:var(--primary-width);
+	max-width: calc(100% - 48px);
+	margin-left:auto;
+	margin-right:auto;
+	padding-top: 32px;
+	padding-bottom:65px;
+}
+.hero-img{
+	width:470px;
+	height:685px;
+	object-fit: cover;
+	border-radius: 20px;
+}
+.hero-body h2 {
+	width: 470px;
+	color: #171100;
+	font-family: Sen;
+	font-size: 5.8rem;;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.17; /* 117.241% */
+	letter-spacing: -1.16px;
+}
+.hero-body .hero-content > p {
+	width: 470px;
+	color: #5F5B53;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.67; /* 166.667% */
+	margin-bottom: 55px;
+}
+.hero-content {
+	width:470px;
+	margin-top: 64px;
+}
+.hero-content h2 {
+	margin-bottom: 22px;
+}
+.btn-hero {
+	display: inline-block;
+	min-width:180px;
+	height:64px;
+	line-height:64px;
+	border-radius: 900px;
+	background: #FFB900;
 	font-family: Poppins;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 600;
 	color:#fff;
 	text-decoration: none;
+	text-align: center;
+}
+.courses {
+	display: flex;
+}
+.hero-watch {
+	display: flex;
+	align-items: center;
+	margin-left: 28px;
+}
+.hero-watch img {
+	width: 40px;
+	height: 40px;
+	margin-right: 14px;
+	transform: translateY(7px);
+
+}
+.hero-watch a {
+	display: inline-block;
+	color: #171100;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6; /* 166.667% */
+	text-decoration: none;
+}
+
+/* ====Hero Desc===== */
+.hero-desc-body {
+	padding: 24px 24px 0px 24px;
+}
+.hero-body-img {
+	position: relative;
+
+	border-radius: 20px;
+}
+.hero-desc {
+	position: absolute;
+	width:270px;	
+	bottom:	48px;
+	right: -110px;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.hero-desc-quantity {
+	color: #5F5B53;
+	font-family: Poppins;
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+.hero-desc-name {
+	color: #171100;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6; /* 166.667% */
+}
+.hero-desc-circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	width: 48px;
+	height: 48px;
+}
+
+.hero-desc-item {
+	display: flex;
+	margin-bottom: 27px;
+}
+.hero-desc-infor {
+	display: flex;
+	flex-direction: column;
+	margin-left: 16px;
+}
+.hero-content > p {
+	color: #5F5B53;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	margin-top: 48px;
+}
+
+/* ====Hero stats===== */
+
+.hero-stats {
+	display: flex;
+}
+.hero-stats-item {
+	display: flex;
+	margin-right: 28px;
+}
+.hero-stats-item strong {
+	color: #171100;
+	font-family: Sen;
+	font-size: 4.4rem;
+	font-style: normal;
+	font-weight: 700;
+}
+.hero-stats-item p {
+	color: #5F5B53;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
+	align-self: flex-end;
+	margin-left: 12px;
+	transform: translateY(-4px);
+}
+.hero-content span {
+	display: inline-block;
+	margin-top: 65px;
+	margin-bottom: 8px;
+	color: #5F5B53;
+	font-family: Poppins;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 400;
 }
