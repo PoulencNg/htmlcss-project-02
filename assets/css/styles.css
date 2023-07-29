@@ -4,6 +4,7 @@
 :root {
 	--primary-color:#FFFCF4;
 	--primary-width:1170px;
+	--line-clamp:1;
 }
 html {
 	font-size:62.5%;
@@ -25,6 +26,15 @@ body {
 	font-weight: 600;
 	color:#fff;
 	text-decoration: none;
+}
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp:var(--line-clamp,1);
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
+}
+.break-all {
+	word-break: break-all;
 }
 .header {
 	background: #FFFCF4;
@@ -370,15 +380,22 @@ box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
 }
 .popular-item-header {
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 6px;
 }
 .popular-item-stars {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: #FEA31B;
 	font-family: Poppins;
 	font-size: 1.6rem;
 	font-style: normal;
 	font-weight: 400;
+}
+.popular-item-stars img {
+	margin-right: 4px;
 }
 .popular-item-body p {
 	width: 326px;
@@ -416,4 +433,77 @@ box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
 	background: #171100;
 	color:#fff;
 	cursor: pointer;
+}
+
+
+/* ===Feedback==== */
+.feedback {
+	margin-top: 200px;
+	background-color: #2E2100;
+}
+.feedback-content {
+	display: flex;
+	justify-content: space-between;
+	width: var(--primary-width);
+	margin-right: auto;
+	margin-left: auto;
+	padding:96px 0;
+}
+.feedback-student {
+	flex:1;
+}
+.student-img {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+.student-name {
+	color: #F7F7F7;
+	font-family: Sen;
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 700;
+	padding-top: 18px;
+	padding-bottom: 4px;
+}
+.student-desc {
+	color: #BFBCB2;
+	font-family: Poppins;
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 400;
+	margin-top: 4px;
+}
+.feedback-comment blockquote {
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 2.6rem;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.5; /* 153.846% */
+}
+.feedback-comment {
+	width: 64%;
+	white-space: normal;
+    word-break:break-all;
+
+}
+.feedback-comment blockquote {
+	margin-left: 30px;
+	white-space: normal;
+    word-break:break-all;
+	margin-right: 25px;
+}
+.student-btn {
+	margin-top: 28px;
+	display: inline-block;
+	padding: 3px;
+	background-color: #634700;
+	border-radius: 50%;
+	border:none;
+	margin-right: 6px;
+}
+.student-btn:hover {
+	background-color: #FFB900;
 }
